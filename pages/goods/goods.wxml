@@ -1,0 +1,18 @@
+<view class="weui-panel weui-panel_access">
+  <view class="weui-panel__hd">
+    Fruits
+  </view>
+  <view class="weui-panel__bd" wx:if="{{ !!goods.length }}">
+    <navigator url="../editGoods/editGoods?id={{ good.id }}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{ goods }}" wx:for-item="good" wx:key="{{ good.id }}">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="{{ good.thumb_url }}"></image>
+        <view class="weui-badge" style="position: absolute;top: 3.5em;right: 1em;">{{ good.cnt }}</view>
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <text class="weui-media-box__title">{{ good.name }}</text>
+        <text class="weui-media-box__desc">￥{{ good.price }}/斤</text>
+      </view>
+    </navigator>
+  </view>
+</view>
+<button class="weui-btn" type="primary" bindtap="addItem">添加</button>

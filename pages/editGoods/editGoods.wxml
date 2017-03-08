@@ -1,0 +1,29 @@
+<view class="weui-cells__title">表单</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">名称</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" bindinput="inputName" value="{{ name }}" placeholder="名称" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">数量</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" bindinput="inputCnt" value="{{ cnt }}" placeholder="斤" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">价格</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" bindinput="inputPrice" value="{{ price }}" placeholder="元/斤" />
+    </view>
+  </view>
+</view>
+<button class="weui-btn" type="primary" bindtap="onConfirm">修改</button>
+<button class="weui-btn" type="warn" bindtap="onDelete">删除</button>
